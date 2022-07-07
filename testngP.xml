@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite2" thread-count="3" >
+
+  <!-- <test name="Chrome">
+  <parameter name="Browser" value="chrome"/>
+  <classes>
+  		<class name="AmazonModules.CrossBrowser"></class>
+  </classes>  		
+  </test>
+  
+
+  <test name="IE">
+  <parameter name="Browser" value="IE"/>
+  <classes>
+  		<class name="AmazonModules.CrossBrowser"></class>
+  </classes>  		
+  </test>
+  
+  <test name="FireFox">
+  <parameter name="Browser" value="FireFox"/>
+  <classes>
+  		<class name="AmazonModules.CrossBrowser"></class>
+  </classes>  		
+  </test>--> <!-- TestParallel -->
+  
+   <test name="grid">
+  <classes>
+  		<class name="AmazonModules.CrossBrowser">
+	  		<methods>
+		  		<include name="gtest"></include>
+		  		<exclude name = "CrossBrowser"></exclude>
+		  		<exclude name = "mobileSearch"></exclude>
+	  		</methods>
+  		</class>
+  </classes>  		
+  </test>
+
+</suite> <!-- Suite2 -->

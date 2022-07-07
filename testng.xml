@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="3" name="Suite">  
+  <parameter name="min" value="20000" />
+  <parameter name="max" value="60000" />
+  <test name="Test">
+  	<classes>
+  		<class name="AmazonModules.NewTest">
+  			<methods>
+  				<include name ="mobileSearch"></include> 				
+  				<exclude name="dummyTest"></exclude>
+  			</methods>
+  		</class>
+  		<class name="AmazonModules.NewTest2">
+  			<methods>
+  			<exclude name="f"></exclude>
+  			</methods>
+  		</class>		
+  	</classes>
+  </test> <!-- Test -->
+  
+  <test name="Test1">
+  <parameter name="mine" value="20000" />
+  <parameter name="maxe" value="60000" />
+     <classes>  	 	
+  		<class name="AmazonModules.TestIE"></class>
+     </classes>  	  
+   </test>
+   
+  <test name="Test2">
+  <parameter name="minf" value="20000" />
+  <parameter name="maxf" value="60000" />
+    <classes>  	 	
+  		<class name="AmazonModules.TestFirefox"></class>
+    </classes>  	  
+  </test>
+  
+</suite> <!-- Suite -->

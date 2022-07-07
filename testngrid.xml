@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite3">
+	
+ <listeners>
+       <listener class-name="demoretry.mytransform"/>
+   </listeners>
+   
+  <test thread-count="5" name="FF">
+    <parameter name="Browser" value="FireFox"/>
+  <classes>
+  		<class name="AmazonModules.gridtest"></class>
+  </classes> 
+  </test> <!-- gridt -->
+  <test thread-count="5" name="Chrome">
+    <parameter name="Browser" value="chrome"/>
+  <classes>
+  		<class name="AmazonModules.gridtest"></class>
+  </classes> 
+  </test> 
+  <test thread-count="5" name="IE">
+    <parameter name="Browser" value="IE"/>
+  <classes>
+  		<class name="AmazonModules.gridtest"></class>
+  </classes> 
+  </test> <!-- gridt -->
+
+
+</suite> <!-- Suite3 -->
